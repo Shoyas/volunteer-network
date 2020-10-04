@@ -1,0 +1,28 @@
+.brand-logo img{
+    height: 70px;
+    width: 270px;
+}
+.brand-logo{
+    cursor: pointer;
+}
+.nav-item{
+    margin-left: 20px;
+}
+.button{
+    height: 50px;
+    width: 125px;
+}
+.btn-color{
+    background-color: transparent !important;
+    color: black;
+    border-radius: none !important;
+    border: none !important;
+    height: 50px;
+    width: 75px;
+}
+.btn-color:hover{
+    color: black !important;
+}
+.background{
+    background-color: white !important;
+}
