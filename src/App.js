@@ -31,13 +31,25 @@ function App() {
               <Header></Header>
               <MainBody></MainBody>
             </Route>
-            
+            <Route exact path="/home">
+              <Navigation></Navigation>
+              <Header></Header>
+              <MainBody></MainBody>
+            </Route>
             <Route path="/logIn">
               <LogIn></LogIn>
             </Route>
+            {/* <PrivateRoute path="/registration/:name">
+              <Registration></Registration>
+            </PrivateRoute> */}
+
             <PrivateRoute path="/registration/:name">
               <Registration></Registration>
             </PrivateRoute>
+
+            <Route path="/registration">
+              <Registration></Registration>
+            </Route>
             <Route path="/events">
               <Events></Events>
             </Route>

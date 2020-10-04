@@ -9,7 +9,7 @@ const Navigation = () => {
         <div className="container">
             <Navbar bg="light" variant="light" className="background">
                 <Navbar.Brand className="brand-logo">
-                    <Link to="/">
+                    <Link to="/home">
                         <img src={logo} alt=""/>
                     </Link>
                 </Navbar.Brand>
@@ -20,7 +20,7 @@ const Navigation = () => {
                     <Link to="/blogs"><span className="nav-item"><button className="btn-color">Blogs</button></span></Link>
                 </Nav>
                 
-                <Link to="/logIn"><Button className="nav-item button" variant="outline-primary">Log In</Button></Link>
+                <Link to="/registration"><Button className="nav-item button" variant="outline-primary">Registration</Button></Link>
                 <Link to="/admin"><Button className="nav-item button" variant="outline-dark">Admin</Button></Link>
                 
             </Navbar>
