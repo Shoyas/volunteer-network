@@ -28,7 +28,7 @@ const Registration = () => {
         //event.preventDefault();
 
         console.log("Watching", newUser);
-        fetch('http://localhost:5000/addUser', {
+        fetch('https://gentle-river-59668.herokuapp.com/addUser', {
             method: 'POST',
             headers: { 'Content-Type' : 'application/json' },
             body: JSON.stringify(newUser),

@@ -22,7 +22,7 @@ const AddEvent = () => {
       };
     const onSubmit = (data) => {
         const newEvent = {data};
-        fetch('http://localhost:5000/addNewEvent', {
+        fetch('https://gentle-river-59668.herokuapp.com/addNewEvent', {
             method: 'POST',
             headers: {
                 'Content-Type' : 'application/json'

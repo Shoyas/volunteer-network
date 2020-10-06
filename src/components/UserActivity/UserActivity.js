@@ -6,7 +6,7 @@ const UserActivity = () => {
     const [activity, setActivity] = useState([]);
     console.log(activity);
     useEffect(() => {
-        fetch('http://localhost:5000/userList?email='+loggedInUser.email)
+        fetch('https://gentle-river-59668.herokuapp.com/userList?email='+loggedInUser.email)
         .then(res => res.json())
         .then(data => setActivity(data));
     }, [])
