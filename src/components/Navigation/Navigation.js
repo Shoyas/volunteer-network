@@ -21,7 +21,7 @@ const Navigation = () => {
                 </Nav>
                 
                 <Link to="/registration"><Button className="nav-item button" variant="outline-primary">Registration</Button></Link>
-                <Link to="/admin"><Button className="nav-item button" variant="outline-dark">Admin</Button></Link>
+                <Link to="/VolunteerList"><Button className="nav-item button" variant="outline-dark">Admin</Button></Link>
                 
             </Navbar>
         </div>

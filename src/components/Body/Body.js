@@ -4,8 +4,6 @@ import './Body.css';
 
 const Body = (props) => {
     const item = props.itm;
-    //console.log(item);
-    //console.log(item.name);
     const {id, name, image} = item;
 
     

@@ -1,0 +1,22 @@
+.addEvent-body{
+    height: 300px;
+}
+#event-title{
+    width: 300px;
+}
+#event-description{
+    width: 300px;
+    height: 120px;
+}
+.Event-part-two{
+    margin-left: 150px;
+}
+#submit-btn{
+    background-color: royalblue;
+    border: none;
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    color: white;
+    margin-top: 293px;
+}

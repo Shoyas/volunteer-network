@@ -1,0 +1,55 @@
+#logo-icon{
+    width: 220px;
+    height: 80px;
+    margin-left: 45px;
+}
+.heading-part h3{
+    margin-top: 25px;
+    margin-left: 105px;
+}
+.volunteer-list-part{
+    border: 5px solid lightgray;
+
+}
+.tag-line{
+    margin-left: 30px;
+}
+.volunteer-detail{
+    width: 250px;
+    height: 50px;
+    padding-top: 10px;
+}
+#resister{
+    padding-left: 13px;
+}
+#volunteer{
+    padding-left: 22px;
+}
+.volunteer-left-part{
+    margin-left: 45px;
+}
+.volunteer-side{
+    margin-top: 30px;
+}
+#logo-user{
+    height: 20px;
+    width: 20px;
+    color: #4169E1;
+}
+#logo-plus{
+    height: 20px;
+    width: 20px;
+}
+.register-one{
+    cursor: pointer;
+}
+.register-one h6{
+    margin-left: 5px;
+    color: #4169E1;
+}
+.register-two{
+    margin-top: 20px;
+}
+#event-btn{
+    margin-left: 5px;
+}

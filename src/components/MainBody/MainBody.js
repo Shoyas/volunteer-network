@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import fakeData from '../fakeData/fakeData';
 import Body from '../Body/Body';
 
 const MainBody = () => {
     
     const [item, setItem] = useState(fakeData);
-    //console.log(item);
     return (
         <div className="cart row d-flex">
             <div className="row">

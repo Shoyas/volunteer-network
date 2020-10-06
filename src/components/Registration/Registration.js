@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { UserContext } from '../../App';
 import logo from './Group 1329.png';
 import './Registration.css';
@@ -10,26 +10,32 @@ import {
   KeyboardDatePicker,
 } from '@material-ui/pickers';
 
+
 const Registration = () => {
     const {name} = useParams();
-    //console.log(name);
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
-
     const [selectedDate, setSelectedDate] = useState(new Date());
-
     const handleDateChange = (date) => {
         setSelectedDate(date);
     };
-    const clickOnRegistrationForm = () => {
-        const newUser = {...loggedInUser, ...selectedDate, ...name};
+    const userName = loggedInUser.name;
+    const useEmail = loggedInUser.email;
+
+    const clickOnRegistrationForm = (event) => {
+        const newUser = {userName, useEmail, selectedDate, name};
+        console.log(newUser);
+
+        //event.preventDefault();
+
+        console.log("Watching", newUser);
         fetch('http://localhost:5000/addUser', {
             method: 'POST',
-            headers: {'Context-Type' : 'application/json'},
+            headers: { 'Content-Type' : 'application/json' },
             body: JSON.stringify(newUser),
         })
         .then(res => res.json())
         .then(data => {
-            console.log(data);
+            alert("post");
         })
     }
 
@@ -44,12 +50,10 @@ const Registration = () => {
                     <br/>
                     <br/>
                     <form action="">
-                        <input type="text" className="input-type" name="name" value={loggedInUser.name} placeholder="Full Name" id=""/>
+                        <input type="text" className="input-type" name="name" defaultValue={loggedInUser.name} placeholder="Full Name" id=""/>
                         <br/>
                         <br/>
-                        <input type="email" className="input-type" name="email" value={loggedInUser.email} placeholder="Email" id=""/>
-                        
-                        {/* <input type="date" className="input-type" name="Date" placeholder="Date" id=""/> */}
+                        <input type="email" className="input-type" name="email" defaultValue={loggedInUser.email} placeholder="Email" id=""/>
                         
                             <MuiPickersUtilsProvider utils={DateFnsUtils}>
                                 <Grid  >
@@ -61,7 +65,7 @@ const Registration = () => {
                                     margin="normal"
                                     id="date-picker-inline"
                                     label="Date"
-                                    value={selectedDate}
+                                    defaultValue={selectedDate}
                                     onChange={handleDateChange}
                                     KeyboardButtonProps={{
                                         'aria-label': 'change date',
@@ -70,18 +74,16 @@ const Registration = () => {
                                 </Grid>
                             </MuiPickersUtilsProvider>
                             <br/>
-                        <input type="text" className="input-type" name="itemName" value={`${name}`} id=""/>
+                        <input type="text" className="input-type" name="itemName" defaultValue={`${name}`} id=""/>
                         <br/>
                         <br/>
-                        <button onClick={clickOnRegistrationForm} className="googleInput">Registration</button>
+                        <Link to="/UserActivity"><button onClick={(event) => clickOnRegistrationForm(event)}  className="googleInput">Registration</button></Link>
                     </form>
-
-                    {/* <Link to="/events" id="event">
-                        
-
-                    </Link> */}
+                    
                 </div>
             </div>
+
+            
 
         </div>
     );
