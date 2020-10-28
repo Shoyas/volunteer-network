@@ -19,8 +19,8 @@ Technologies:
 - CSS3
 - ES6
 - React.JS
-- Bootstrap
-- React-Spring
+- React-Bootstrap
+- Metarial-UI
 - MongoDB
 - ReST API
 - Node.JS
